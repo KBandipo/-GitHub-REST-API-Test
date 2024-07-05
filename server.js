@@ -13,13 +13,6 @@ app.use(express.static("public")); // Serve static files from the 'public' direc
 
 const PORT = process.env.PORT || 3000;
 
-console.log(
-  "GITHUB_PERSONAL_ACCESS_TOKEN:",
-  process.env.GITHUB_PERSONAL_ACCESS_TOKEN
-);
-console.log("GITHUB_API_URL:", process.env.GITHUB_API_URL);
-console.log("GITHUB_REPOS_API_URL:", process.env.GITHUB_REPOS_API_URL);
-
 // Endpoint to get issues
 app.get("/issues", async (req, res) => {
   try {
